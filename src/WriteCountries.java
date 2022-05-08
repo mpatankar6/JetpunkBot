@@ -9,17 +9,17 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 
 public class WriteCountries {
-    private final int kKEY_DELAY = 5; //ms
-
+    
     private Robot m_robot;
     private ArrayList<String> m_countries = new ArrayList<String>();
     private Map<Character, Integer> m_keyMap = new HashMap<>();
 
+    private final int kKEY_DELAY = 5; //ms
     private final String[] kBLACKLIST = {
         "Anguilla", "Aland Islands", "St. Barthelemy", "Caribbean Netherlands", "Cocos (Keeling) Islands", "Congo - Brazzaville", "Cook Islands", "Curacao",
         "Aruba", "Antarctica", "American Samoa", "Christmas Island", "Western Sahara", "Bermuda", "Bouvet Island", "Congo - Kinshasa", "Dominican Republic", "Falkland Islands",
         "Faroe Islands", "French Guiana", "Guernsey", "Gibraltar", "Greenland", "Guadeloupe", "South Georgia & South Sandwich Islands", "Guam", "Hong Kong SAR China", "Heard & McDonald Islands",
-        "Isle of Man", "British Indian Ocean Territory", "St. Martin", "Macau SAR China", "Northern Mariana Islands", "Martinique", "Montserrat", "New Caledonia", "Norfolk Island", 
+        "Isle of Man", "British Indian Ocean Territory", "St. Martin", "Macao SAR China", "Northern Mariana Islands", "Martinique", "Montserrat", "New Caledonia", "Norfolk Island", 
         "Niue", "French Polynesia", "St. Pierre & Miquelon", "Pitcairn Islands", "Puerto Rico", "Palestinian Territories", "Reunion", "St. Helena", "Svalbard & Jan Mayen", "Sint Maarten",
         "U.S. Outlying Islands", "British Virgin Islands", "U.S. Virgin Islands", "Wallis & Futuna", "Mayotte", "Jersey", "Cayman Islands", "Turks & Caicos Islands", "French Southern Territories",
         "Tokelau", "Vatican City"
@@ -51,7 +51,6 @@ public class WriteCountries {
             }
             System.out.println();
         }
-        
     }
 
     private int getKey(Character letter) {
@@ -70,7 +69,6 @@ public class WriteCountries {
         m_keyMap.put('.', 46);
     }
 
-    //To match Jetpunks list
     private void adjustCountryList() {
         m_countries.remove(43); // Getting rid of that pesky Côte d'Ivoire (Cote d?Ivoire)
 
